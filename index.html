@@ -9,19 +9,21 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="logo-wrapper">
-                <h1 class="header__logo" data-beta="بث تجريبي"><a href="https://www.alahlyegypt.com/ar"><span class="visually-hidden">Al Ahly</span><img src="img/new-logo.webp" alt="النادي الأهلي"></a><span class="mob-menu-title">النادي الأهلي</span></h1>
-                <div class="mobile-language">
+    <header class="main-header">
+        <div class="container header__wrapper">
+            <div class="logo-wrapper flex-row">
+                <h1 class="header__logo flex-row" data-beta="بث تجريبي"
+                ><a href="https://www.alahlyegypt.com/ar"><span class="visually-hidden">Al Ahly</span
+                    ><img src="img/new-logo.webp" alt="النادي الأهلي"></a><span class="mob-menu-title">النادي الأهلي</span></h1>
+                <div class="mobile-language flex-row">
                 <a class="en" href="https://www.alahlyegypt.com/en">En</a>
                 <a class="fr" href="https://www.alahlyegypt.com/fr">Fr</a>
-                <a class="ar" href="https://www.alahlyegypt.com/ar">العربية</a>
+                <!-- <a class="ar" href="https://www.alahlyegypt.com/ar">العربية</a> -->
                 </div>
-                <a class="burger-icon" href="javascript:void(0);">☰</a>
+                <a class="burger-icon" href="javascript:void(0);"></a>
             </div>
 
-            <div class="search-section">
+            <div class="search-section container mob-search-container">
                 <div class="search-results__input-wrapper">
                     <form method="POST" action="https://www.alahlyegypt.com/ar/search" autocomplete="off">
                         <input type="hidden" name="_token" value="bdB18BLGr4NN2Mljyb26NlLT5GpSnwkuBQkdnr9E"> 
@@ -34,32 +36,34 @@
                 </div>
             </div>
 
-            <div class="header__nav-wrapper">
+            <div class="header__nav-wrapper flex-column">
                 <nav class="header__top-nav" data-beta="بث تجريبي">
                     <ul class="list list--inline">
                         <li class="header__top-nav-list-item">
-                            <a href="https://www.youtube.com/channel/UCA86pBGxVPZGrTeTecOtjew" target="_blank">
-                                <svg>
-                                    <use xlink:href="https://www.alahlyegypt.com/assets/images/svg-defs.svg#video">
-                                    </use>
-                                </svg>
+                            <svg>
+                                <use xlink:href="https://www.alahlyegypt.com/assets/images/svg-defs.svg#video">
+                                    <div id="shadow-root">
+                                        <svg viewBox="0 0 16 16" id="video" xmlns="http://www.w3.org/2000/svg"><path d="M8 0C3.58 0 0 3.58 0 8s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8zm3.223 8.15l-5.277 3.192c-.111.07-.258-.015-.258-.15V4.808a.17.17 0 01.258-.15l5.277 3.192a.176.176 0 010 .3z" fill="#000" fill-rule="evenodd"></path></svg>
+                                    </div>
+                                </use>
+                            </svg>
                                 <span>على الهواء</span>
                             </a>
                         </li>
                     </ul>
                     <a class="header__top-nav-link en" href="https://www.alahlyegypt.com/en">En</a>
                     <a class="header__top-nav-link fr" href="https://www.alahlyegypt.com/fr">Fr</a>
-                    <a class="header__top-nav-link ar" href="https://www.alahlyegypt.com/ar">العربية</a>
+                    <!-- <a class="header__top-nav-link ar" href="https://www.alahlyegypt.com/ar">العربية</a> -->
                 </nav>
 
-                <nav class="header__bottom-nav">
-                    <ul class="list list--inline">
+                <nav class="header__bottom-nav flex-column">
+                    <ul class="list list--inline flex-column">
                         <li class="bottom-nav has-list">
                             <button class="button--plain bottom-nav__title" type="button">كرة القدم </button>
                             <div class="bottom-nav__sublist-wrapper">
                                 <div class="bottom-nav__sublist-container">
                                     <h3 class="bottom-nav__subtitle">كرة القدم </h3>
-                                    <ul class="bottom-nav__sublist">
+                                    <ul class="bottom-nav__sublist flex-row">
                                         <li class="bottom-nav__sublist-item">
                                             <a href="https://www.alahlyegypt.com/ar/football/team"> الفريق الأول</a>
                                         </li>
@@ -153,7 +157,7 @@
                             <div class="bottom-nav__sublist-wrapper">
                                 <div class="bottom-nav__sublist-container">
                                     <h3 class="bottom-nav__subtitle">الأكاديمية</h3>
-                                        <ul class="bottom-nav__sublist">
+                                        <ul class="bottom-nav__sublist flex-row">
                                             <li class="bottom-nav__sublist-item">
                                                 <a href="https://www.alahlyegypt.com/ar/academy">عن الأكاديمية </a>
                                             </li>
@@ -172,7 +176,7 @@
                             <div class="bottom-nav__sublist-wrapper">
                                 <div class="bottom-nav__sublist-container">
                                     <h3 class="bottom-nav__subtitle">الألعاب الأخرى</h3>
-                                    <ul class="bottom-nav__sublist">
+                                    <ul class="bottom-nav__sublist flex-row">
                                         <li class="bottom-nav__sublist-item">
                                             <a href="https://www.alahlyegypt.com/ar/other-sports/1">كرة سلة</a>
                                         </li>
