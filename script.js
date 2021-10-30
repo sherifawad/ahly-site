@@ -221,3 +221,56 @@ const translateTo = function (e, right, container_class, item_class){
 
 document.querySelector("#slide-players-next").addEventListener("click", e => translateTo(e, true, ".slides-container", ".player-item"));
 document.querySelector("#slide-players-prev").addEventListener("click", e => translateTo(e, false, ".slides-container", ".player-item"));
+
+let playersContainer = document.querySelector(".slides-container");
+let initailPosition = null;
+let differ = null;
+let moving = false;
+let way = false;
+let currentPos = null;
+playersContainer.addEventListener("touchstart", e => initailPosition = e.touches[0].clientX);
+
+playersContainer.addEventListener("touchmove", e => {
+    e.preventDefault();
+    currentPos = e.touches[0].clientX;
+    differ = currentPos - initailPosition;
+    playersContainer.scrollBy({
+        top: 0,
+        left: -differ,
+        behavior: 'smooth'
+        
+    });
+});
+
+playersContainer.addEventListener("touchend", e => {
+    e.preventDefault();
+    way = differ > 0 ? false : true;
+    translateTo(e, way, ".slides-container", ".player-item")
+});
+
+playersContainer.addEventListener("mousedown", e => {
+    initailPosition = e.clientX;
+    moving = true;
+});
+
+playersContainer.addEventListener("mousemove", e => {
+    if(moving){
+        e.preventDefault();
+        currentPos = e.clientX;
+        differ = currentPos - initailPosition;
+        playersContainer.scrollBy({
+            top: 0,
+            left: -differ,
+            behavior: 'smooth'
+            
+        });
+    }
+
+});
+
+playersContainer.addEventListener("mouseup", e => {
+    e.preventDefault();
+    moving = false
+    way = differ > 0 ? false : true;
+    translateTo(e, way, ".slides-container", ".player-item")
+});
