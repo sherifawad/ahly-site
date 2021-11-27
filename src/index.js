@@ -1,14 +1,14 @@
-
-document.querySelectorAll(".bottom-nav.has-list").forEach(item =>
+import "./main.css"
+document.querySelectorAll(".bottom-nav.has-list").forEach((item) =>
     {
         
-        item.addEventListener('click', e => {
+        item.addEventListener('click', (e) => {
         let ele = e.target;
         if(ele.getAttribute('type') === "button"){
             ele = e.target.parentElement;
         }
-        document.querySelectorAll(".bottom-nav.has-list").forEach(el => {
-            if(el != ele){
+        document.querySelectorAll(".bottom-nav.has-list").forEach((el) => {
+            if(el !== ele){
                 el.classList.remove("open");
                 el.querySelector(".bottom-nav__sublist-wrapper").classList.remove("open");
             }
@@ -219,8 +219,8 @@ const translateTo = function (e, right, container_class, item_class){
     featuredPlayer.querySelector(".featured-player__position").innerHTML = container.querySelector(".active-player .player__position").innerHTML;
 }
 
-document.querySelector("#slide-players-next").addEventListener("click", e => translateTo(e, true, ".slides-container", ".player-item"));
-document.querySelector("#slide-players-prev").addEventListener("click", e => translateTo(e, false, ".slides-container", ".player-item"));
+document.querySelector("#slide-players-next").addEventListener("click", (e) => translateTo(e, true, ".slides-container", ".player-item"));
+document.querySelector("#slide-players-prev").addEventListener("click", (e) => translateTo(e, false, ".slides-container", ".player-item"));
 
 let playersContainer = document.querySelector(".slides-container");
 let initailPosition = null;
@@ -228,9 +228,9 @@ let differ = null;
 let moving = false;
 let way = false;
 let currentPos = null;
-playersContainer.addEventListener("touchstart", e => initailPosition = e.touches[0].clientX);
+playersContainer.addEventListener("touchstart", (e) => initailPosition = e.touches[0].clientX);
 
-playersContainer.addEventListener("touchmove", e => {
+playersContainer.addEventListener("touchmove", (e) => {
     e.preventDefault();
     currentPos = e.touches[0].clientX;
     differ = currentPos - initailPosition;
@@ -242,18 +242,18 @@ playersContainer.addEventListener("touchmove", e => {
     });
 });
 
-playersContainer.addEventListener("touchend", e => {
+playersContainer.addEventListener("touchend", (e) => {
     e.preventDefault();
     way = differ > 0 ? false : true;
     translateTo(e, way, ".slides-container", ".player-item")
 });
 
-playersContainer.addEventListener("mousedown", e => {
+playersContainer.addEventListener("mousedown", (e) => {
     initailPosition = e.clientX;
     moving = true;
 });
 
-playersContainer.addEventListener("mousemove", e => {
+playersContainer.addEventListener("mousemove", (e) => {
     if(moving){
         e.preventDefault();
         currentPos = e.clientX;
@@ -268,7 +268,7 @@ playersContainer.addEventListener("mousemove", e => {
 
 });
 
-playersContainer.addEventListener("mouseup", e => {
+playersContainer.addEventListener("mouseup", (e) => {
     e.preventDefault();
     moving = false
     way = differ > 0 ? false : true;
