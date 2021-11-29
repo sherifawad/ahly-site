@@ -1,4 +1,4 @@
-@import url(base.css:root);
+/* @import url(./base.css:root); */
 
 .main-header {
   direction: rtl;
@@ -54,7 +54,7 @@
 
 .mobile-language a {
   margin: 0 10px;
-  font-size: .9rem;
+  font-size: 0.9rem;
 }
 
 .burger-icon::after {
@@ -163,20 +163,20 @@
   font-weight: bold;
 }
 
-.bottom-nav__subtitle{
-    display: none;
+.bottom-nav__subtitle {
+  display: none;
 }
 
 .bottom-nav__sublist.flex-row {
-    padding: 0;
+  padding: 0;
 }
 
 #profile-cta-login {
-    font-weight: normal;
+  font-weight: normal;
 }
 
-.bottom-nav.has-list{
-    position: relative;
+.bottom-nav.has-list {
+  position: relative;
 }
 
 .header__bottom-nav .list li:not(:last-child) {
@@ -217,15 +217,14 @@
 }
 
 .header__top-nav ul {
-    justify-content: space-between;
-    padding-bottom: 12px;
-    border-bottom: 2px solid #e8e8e9;
-    margin-bottom: 12px;
+  justify-content: space-between;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #e8e8e9;
+  margin-bottom: 12px;
 }
 
-
-.header__top-nav-link{
-    font-size: .8rem;
+.header__top-nav-link {
+  font-size: 0.8rem;
 }
 
 .header__top-nav-link.en::after {
@@ -234,10 +233,10 @@
 }
 
 .bottom-nav__sublist-item {
-    width: 50%;
+  width: 50%;
 }
 
 .bottom-nav.has-list.open::after {
-    transform: rotate(225deg);
-    top: 10px;
+  transform: rotate(225deg);
+  top: 10px;
 }

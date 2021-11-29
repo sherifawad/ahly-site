@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الموقع الرسمي للنادي الأهلي المصري</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container header__wrapper">
+            <div class="logo-wrapper flex-row">
+                <h1 class="header__logo flex-row" data-beta="بث تجريبي"
+                ><a href="https://www.alahlyegypt.com/ar"><span class="visually-hidden">Al Ahly</span
+                    ><img src="img/new-logo.webp" alt="النادي الأهلي"></a><span class="mob-menu-title">النادي الأهلي</span></h1>
+                <div class="mobile-language flex-row">
+                <a class="en" href="https://www.alahlyegypt.com/en">En</a>
+                <a class="fr" href="https://www.alahlyegypt.com/fr">Fr</a>
+                <!-- <a class="ar" href="https://www.alahlyegypt.com/ar">العربية</a> -->
+                </div>
+                <a class="burger-icon" href="javascript:void(0);"></a>
+            </div>
+
+            <div class="search-section container mob-search-container">
+                <div class="search-results__input-wrapper">
+                    <form method="POST" action="https://www.alahlyegypt.com/ar/search" autocomplete="off">
+                        <input type="hidden" name="_token" value="bdB18BLGr4NN2Mljyb26NlLT5GpSnwkuBQkdnr9E"> 
+                        <div class="autocomplete">
+                            <label>
+                                <input class="search-results__input" name="searchKey" id="searchKeyMob" type="text" placeholder="بحث">
+                            </label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="header__nav-wrapper flex-column">
+                <nav class="header__top-nav" data-beta="بث تجريبي">
+                    <ul class="list list--inline">
+                        <li class="header__top-nav-list-item">
+                            <svg>
+                                <use xlink:href="https://www.alahlyegypt.com/assets/images/svg-defs.svg#video">
+                                    <div id="shadow-root">
+                                        <svg viewBox="0 0 16 16" id="video" xmlns="http://www.w3.org/2000/svg"><path d="M8 0C3.58 0 0 3.58 0 8s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8zm3.223 8.15l-5.277 3.192c-.111.07-.258-.015-.258-.15V4.808a.17.17 0 01.258-.15l5.277 3.192a.176.176 0 010 .3z" fill="#000" fill-rule="evenodd"></path></svg>
+                                    </div>
+                                </use>
+                            </svg>
+                                <span>على الهواء</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <a class="header__top-nav-link en" href="https://www.alahlyegypt.com/en">En</a>
+                    <a class="header__top-nav-link fr" href="https://www.alahlyegypt.com/fr">Fr</a>
+                    <!-- <a class="header__top-nav-link ar" href="https://www.alahlyegypt.com/ar">العربية</a> -->
+                </nav>
+
+                <nav class="header__bottom-nav flex-column">
+                    <ul class="list list--inline flex-column">
+                        <li class="bottom-nav has-list">
+                            <button class="button--plain bottom-nav__title" type="button">كرة القدم </button>
+                            <div class="bottom-nav__sublist-wrapper">
+                                <div class="bottom-nav__sublist-container">
+                                    <h3 class="bottom-nav__subtitle">كرة القدم </h3>
+                                    <ul class="bottom-nav__sublist flex-row">
+                                        <li class="bottom-nav__sublist-item">
+                                            <a href="https://www.alahlyegypt.com/ar/football/team"> الفريق الأول</a>
+                                        </li>
+                                        <li class="bottom-nav__sublist-item">
+                                            <a href="https://www.alahlyegypt.com/ar/football/news">الأخبار</a>
+                                        </li>
+                                        <li class="bottom-nav__sublist-item">
+                                            <a href="https://www.alahlyegypt.com/ar/football/match-schedules">جدول المباريات</a>
+                                        </li>
+                                        <li class="bottom-nav__sublist-item">
+                                            <a href="https://www.alahlyegypt.com/ar/football/match-results">النتائج</a>
+                                        </li>
+                                        <li class="bottom-nav__sublist-item">
+                                            <a href="https://www.alahlyegypt.com/ar/football/standings">الترتيب</a>
+                                        </li>
+                                        <li class="bottom-nav__sublist-item">
+                                            <a href="https://www.alahlyegypt.com/ar/football/players">اللاعبين</a>
+                                        </li>
+                                        <li class="bottom-nav__sublist-item">
+                                            <a href="https://www.alahlyegypt.com/ar/football/honors">الإنجازات</a>
+                                        </li>
+                                        <li class="bottom-nav__sublist-item">
+                                            <a href="https://www.alahlyegypt.com/ar/football/videos">ڤيديوهات</a>
+                                        </li>
+                                        <li class="bottom-nav__sublist-item">
+                                            <a href="https://www.alahlyegypt.com/ar/football/albums">الصور</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="bottom-nav">
+                        <a class="bottom-nav__title" href="https://www.alahlyegypt.com/ar/news">الأخبار</a>
+                        </li>
+                        <li class="bottom-nav">
+                        <a class="bottom-nav__title" href="https://www.alahlyegypt.com/ar/videos">ڤيديوهات</a>
+                        </li>
+                        <li class="bottom-nav has-list">
+                        <button class="button--plain bottom-nav__title" type="button">النادي</button>
+                            <div class="bottom-nav__sublist-wrapper">
+                                <div class="bottom-nav__sublist-container">
+                                    <h3 class="bottom-nav__subtitle">عن النادي</h3>
+                                    <ul class="bottom-nav__sublist">
+                                        <li class="bottom-nav__sublist-item">
+                                            <a href="https://www.alahlyegypt.com/ar/club/news">الأخبار</a>
+                                        </li>
+                                        <li class="bottom-nav__sublist-item">
+                                            <a href="https://www.alahlyegypt.com/ar/club/honors">الإنجازات</a>
+                                        </li>
+                                        <li class="bottom-nav__sublist-item">
+                                            <a href="https://www.alahlyegypt.com/ar/club/locations">الفروع</a>
+                                        </li>
+                                        <li class="bottom-nav__sublist-item">
+                                            <a href="https://www.alahlyegypt.com/ar/club/membership">عضوية النادي</a>
+                                        </li>
+                                        <li class="bottom-nav__sublist-item">
+                                            <a href="https://www.alahlyegypt.com/ar/club/history">تاريخ النادي</a>
+                                        </li>
+                                        <li class="bottom-nav__sublist-item">
+                                            <a href="https://www.alahlyegypt.com/ar/club/executives">مجلس الإدارة</a>
+                                        </li>
+                                        <li class="bottom-nav__sublist-item">
+                                            <a href="https://www.alahlyegypt.com/ar/club/presidents">رؤساء الأهلي</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="bottom-nav__sublist-container">
+                                    <h3 class="bottom-nav__subtitle">المزيد</h3>
+                                    <ul class="bottom-nav__sublist">
+                                        <li class="bottom-nav__sublist-item">
+                                            <a href="https://www.alahlyegypt.com/ar/club/csr">المسؤولية الاجتماعية</a>
+                                        </li>
+                                        <li class="bottom-nav__sublist-item">
+                                            <a href="https://www.alahlyegypt.com/ar/club/services">الخدمات</a>
+                                        </li>
+                                        <li class="bottom-nav__sublist-item">
+                                            <a href="https://www.alahlyegypt.com/ar/club/partners">الشركاء</a>
+                                        </li>
+                                        <li class="bottom-nav__sublist-item">
+                                            <a href="https://www.alahlyegypt.com/ar/press-request">طلب تصريح</a>
+                                        </li>
+                                        <li class="bottom-nav__sublist-item">
+                                            <a href="https://www.alahlyegypt.com/ar/contact-us">اتصل بنا</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="bottom-nav has-list">
+                            <button class="button--plain bottom-nav__title" type="button">الأكاديمية</button>
+                            <div class="bottom-nav__sublist-wrapper">
+                                <div class="bottom-nav__sublist-container">
+                                    <h3 class="bottom-nav__subtitle">الأكاديمية</h3>
+                                        <ul class="bottom-nav__sublist flex-row">
+                                            <li class="bottom-nav__sublist-item">
+                                                <a href="https://www.alahlyegypt.com/ar/academy">عن الأكاديمية </a>
+                                            </li>
+                                            <li class="bottom-nav__sublist-item">
+                                                <a href="https://www.alahlyegypt.com/ar/academy/activities">الأنشطة</a>
+                                            </li>
+                                            <li class="bottom-nav__sublist-item">
+                                                <a href="https://www.alahlyegypt.com/ar/academy/news">الأخبار</a>
+                                            </li>
+                                        </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="bottom-nav has-list">
+                            <button class="button--plain bottom-nav__title" type="button">الألعاب الأخرى</button>
+                            <div class="bottom-nav__sublist-wrapper">
+                                <div class="bottom-nav__sublist-container">
+                                    <h3 class="bottom-nav__subtitle">الألعاب الأخرى</h3>
+                                    <ul class="bottom-nav__sublist flex-row">
+                                        <li class="bottom-nav__sublist-item">
+                                            <a href="https://www.alahlyegypt.com/ar/other-sports/1">كرة سلة</a>
+                                        </li>
+                                        <li class="bottom-nav__sublist-item">
+                                            <a href="https://www.alahlyegypt.com/ar/other-sports/4">كرة طائرة</a>
+                                        </li>
+                                        <li class="bottom-nav__sublist-item">
+                                            <a href="https://www.alahlyegypt.com/ar/other-sports/5">كرة يد</a>
+                                        </li>
+                                        <li class="bottom-nav__sublist-item">
+                                            <a href="https://www.alahlyegypt.com/ar/other-sports/7">تنس الطاولة</a>
+                                        </li>
+                                        <li class="bottom-nav__sublist-item">
+                                            <a href="https://www.alahlyegypt.com/ar/other-sports/8">الإسكواش</a>
+                                        </li>
+                                        <li class="bottom-nav__sublist-item">
+                                            <a href="https://www.alahlyegypt.com/ar/other-sports/10">الكاراتيه</a>
+                                        </li>
+                                        <li class="bottom-nav__sublist-item">
+                                            <a href="https://www.alahlyegypt.com/ar/other-sports/11">الجمباز</a>
+                                        </li>
+                                        <li class="bottom-nav__sublist-item">
+                                            <a href="https://www.alahlyegypt.com/ar/other-sports/12">ألعاب الماء</a>
+                                        </li>
+                                        <li class="bottom-nav__sublist-item">
+                                            <a href="https://www.alahlyegypt.com/ar/other-sports/13">تنس أرضي</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        
+                        </li>
+                    </ul>
+                    <ul class="list list--inline desktop-only">
+                        <li class="bottom-nav bottom-nav__action-item search-btn">
+                            <a class="button--plain bottom-nav__title" href="https://www.alahlyegypt.com/auth/login" id="profile-cta-login">
+                            <svg>
+                            </svg><span>تسجيل الدخول </span>
+                            </a>
+                        </li>
+                        <li class="bottom-nav bottom-nav__action-item search-btn">
+                            <button class="button--plain bottom-nav__title" href="#!" type="button" id="search-cta">
+                                <svg>
+                                    <use xlink:href="https://www.alahlyegypt.com/assets/images/svg-defs.svg#search"></use>
+                                </svg>
+                                <span>بحث</span>
+                            </button>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+    </header>
+
+    <div id="main-content" class="container">
+        
+        <section id="slides-section">
+            <div class="section-container slides-section__wrapper">
+
+                <div id="featrued-slide">
+                    <img class="featured-image" src="./img/245328393_1029258124540293_4082133100503616285_n-61744b894ea.jpg" alt="" >
+                    <div class="featured-text-wrapper">
+                        <p class="slide-date">24/10/2020</p>
+                        <a href="" class="slide-link">
+                            <p class="slide-text">A/Lorem ipsum dolor sit amet consectetur adipisicing elit. Et perferendis incidunt voluptatem omnis maiores modi quaerat nihil atque nam iure id recusandae ratione harum ad, accusamus, ea quos nisi deserunt?</p>
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="slider-wrapper flex-row">
+
+                    <ul class="slider-wrapper__slides flex-row">
+
+                        <li class="slide news-slide">
+                            <div class="thumbnail-wrapper flex-column">
+                                <img src="./img/245328393_1029258124540293_4082133100503616285_n-61744b894ea.jpg" alt="" class="thumbnail__image active-image">
+                                <div class="thumbnail__data">
+                                    <p class="thumbnail-date">24/10/2020</p>
+                                    <a href="" class="thumbnail__link">
+                                        <span class="thumnail__title">A/Lorem ipsum dolor sit amet consectetur adipisicing elit. Et perferendis incidunt voluptatem omnis maiores modi quaerat nihil atque nam iure id recusandae ratione harum ad, accusamus, ea quos nisi deserunt?</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="slide news-slide">
+                            <div class="thumbnail-wrapper flex-column">
+                                <img src="./img/246665418_3077479969201528_2492884771592456296_n-61742e762af.jpg" alt="" class="thumbnail__image">
+                                <div class="thumbnail__data">
+                                    <p class="thumbnail-date">36/7/7070</p>
+                                    <a href="" class="thumbnail__link">
+                                        <span class="thumnail__title">B/Lorem ipsum dolor sit amet consectetur adipisicing elit. Et perferendis incidunt voluptatem omnis maiores modi quaerat nihil atque nam iure id recusandae ratione harum ad, accusamus, ea quos nisi deserunt?</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="slide news-slide">
+                            <div class="thumbnail-wrapper flex-column">
+                                <img src="./img/247417413_561236574969015_1463668899285318200_n-617451ff56c7.jpg" alt="" class="thumbnail__image">
+                                <div class="thumbnail__data">
+                                    <p class="thumbnail-date">200/100/5050</p>
+                                    <a href="" class="thumbnail__link">
+                                        <span class="thumnail__title">C/Lorem ipsum dolor sit amet consectetur adipisicing elit. Et perferendis incidunt voluptatem omnis maiores modi quaerat nihil atque nam iure id recusandae ratione harum ad, accusamus, ea quos nisi deserunt?</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                    <div class="slide-button">
+                        <button class="slide-button__next" id="slide-news-next" area-label="next"  type="button"></button>
+                        <button class="slide-button__prev" id="slide-news-prev" area-label="previous"  type="button"></button>
+                    </div>
+
+                </div>
+                
+            </div>
+        </section>
+
+        <section id="news-section">
+            <div class="section-container news-section__wrapper">
+                <div class="section-title__wrapper flex-column">
+                    <h3 class="section__title">أخبار الأهلي</h3>
+                    <a href="" class="section__link has-arrow">المزيد</a>
+                </div>
+
+
+                <ul class="list news-list flex-row">
+
+
+                    <li class="news__item list__item">
+                        <div class="thumbnail-wrapper flex-column">
+                            <img src="./img/245328393_1029258124540293_4082133100503616285_n-61744b894ea.jpg" alt="" class="thumbnail__image">
+                            <div class="thumbnail__data">
+                                <p class="thumbnail-date">24/10/2020</p>
+                                <a href="" class="thumbnail__link">
+                                    <span class="thumnail__title">مجلس الإدارة يعتمد قائمة المرشحين في انتخابات الأهلي</span>
+                                </a>
+                                <a href="" class="section__link has-arrow">اقرأ المزيد</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="news__item list__item">
+                        <div class="thumbnail-wrapper flex-column">
+                            <img src="./img/246665418_3077479969201528_2492884771592456296_n-61742e762af.jpg" alt="" class="thumbnail__image">
+                            <div class="thumbnail__data">
+                                <p class="thumbnail-date">36/7/7070</p>
+                                <a href="" class="thumbnail__link">
+                                    <span class="thumnail__title">«سيدات يد الأهلي» يفوز على 6 أكتوبر في بطولة الدوري</span>
+                                </a>
+                                <a href="" class="section__link has-arrow">اقرأ المزيد</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="news__item list__item">
+                        <div class="thumbnail-wrapper flex-column">
+                            <img src="./img/247417413_561236574969015_1463668899285318200_n-617451ff56c7.jpg" alt="" class="thumbnail__image">
+                            <div class="thumbnail__data">
+                                <p class="thumbnail-date">200/100/5050</p>
+                                <a href="" class="thumbnail__link">
+                                    <span class="thumnail__title">«رجال سلة الأهلي» يفوز على القناة في دوري المرتبط</span>
+                                </a>
+                                <a href="" class="section__link has-arrow">اقرأ المزيد</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="news__item list__item">
+                        <div class="thumbnail-wrapper flex-column">
+                            <img src="./img/245328393_1029258124540293_4082133100503616285_n-61744b894ea.jpg" alt="" class="thumbnail__image active-image">
+                            <div class="thumbnail__data">
+                                <p class="thumbnail-date">24/10/2020</p>
+                                <a href="" class="thumbnail__link">
+                                    <span class="thumnail__title">قناة الأهلي تعلن وقوفها على مسافة واحدة.. وسوف تمنح الفرصة لكل المرشحين</span>
+                                </a>
+                                <a href="" class="section__link has-arrow">اقرأ المزيد</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="news__item list__item">
+                    <div class="thumbnail-wrapper flex-column">
+                        <img src="./img/246665418_3077479969201528_2492884771592456296_n-61742e762af.jpg" alt="" class="thumbnail__image">
+                        <div class="thumbnail__data">
+                            <p class="thumbnail-date">36/7/7070</p>
+                            <a href="" class="thumbnail__link">
+                                <span class="thumnail__title">الدوري الممتاز| موسيماني يعلن قائمة الأهلي لمباراة الإسماعيلي</span>
+                            </a>
+                            <a href="" class="section__link has-arrow">اقرأ المزيد</a>
+                        </div>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+        </section>
+
+        <section id="awards">
+            <div class="awards-container flex-row">
+                <div class="awards__title">
+                    <h1><span>142</span>بطولات وألقاب</h1>
+                </div>
+
+                <ul class="list awards__list flex-row">
+                    <li class="award__item list-item">
+                        <p class="award__name">بطولة الدوري العام</p>
+                        <p class="award__number flex-column">42</p>
+                    </li>
+                    <li class="award__item list-item">
+                        <p class="award__name">بطولة دوري أبطال أفريقيا</p>
+                        <p class="award__number flex-column">10</p>
+                    </li>
+                    <li class="award__item list-item">
+                        <p class="award__name">بطولة كأس الكونفيدرالية</p>
+                        <p class="award__number flex-column">1</p>
+                    </li>
+                    <li class="award__item list-item">
+                        <p class="award__name">كأس السوبر الأفريقي</p>
+                        <p class="award__number flex-column">7</p>
+                    </li>
+                </ul>
+
+            </div>
+        </section>
+
+        <section id="videos">
+            <div class="section-container news-section__wrapper">
+                <div class="section-title__wrapper flex-column">
+                    <h3 class="section__title">ڤيديوهات</h3>
+                    <a href="" class="section__link has-play-icon">المزيد</a>
+                </div>
+
+
+                <ul class="list news-list flex-row">
+
+
+                    <li class="news__item list__item">
+                        <div class="thumbnail-wrapper flex-column">
+                            <img src="./img/245328393_1029258124540293_4082133100503616285_n-61744b894ea.jpg" alt="" class="thumbnail__image">
+                            <div class="thumbnail__data">
+                                <p class="thumbnail-date">24/10/2020</p>
+                                <a href="" class="thumbnail__link">
+                                    <span class="thumnail__title">سر التاسعة</span>
+                                </a>
+                                <a href="" class="section__link has-play-icon">مشاهدة</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="news__item list__item">
+                        <div class="thumbnail-wrapper flex-column">
+                            <img src="./img/246665418_3077479969201528_2492884771592456296_n-61742e762af.jpg" alt="" class="thumbnail__image">
+                            <div class="thumbnail__data">
+                                <p class="thumbnail-date">36/7/7070</p>
+                                <a href="" class="thumbnail__link">
+                                    <span class="thumnail__title">لقاءات خاصة مع لاعبي الأهلي بعد التتويج ببطولة كأس مصر</span>
+                                </a>
+                                <a href="" class="section__link has-play-icon">مشاهدة</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="news__item list__item">
+                        <div class="thumbnail-wrapper flex-column">
+                            <img src="./img/247417413_561236574969015_1463668899285318200_n-617451ff56c7.jpg" alt="" class="thumbnail__image">
+                            <div class="thumbnail__data">
+                                <p class="thumbnail-date">200/100/5050</p>
+                                <a href="" class="thumbnail__link">
+                                    <span class="thumnail__title">«شاهد موسيماني يرقص احتفالاً ببطولة افريقيا</span>
+                                </a>
+                                <a href="" class="section__link has-play-icon">مشاهدة</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="news__item list__item">
+                        <div class="thumbnail-wrapper flex-column">
+                            <img src="./img/245328393_1029258124540293_4082133100503616285_n-61744b894ea.jpg" alt="" class="thumbnail__image active-image">
+                            <div class="thumbnail__data">
+                                <p class="thumbnail-date">24/10/2020</p>
+                                <a href="" class="thumbnail__link">
+                                    <span class="thumnail__title">شاهد تتويج الأهلي بالبطولة التاسعة لدوري أبطال إفريقيا</span>
+                                </a>
+                                <a href="" class="section__link has-play-icon">مشاهدة</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="news__item list__item">
+                    <div class="thumbnail-wrapper flex-column">
+                        <img src="./img/246665418_3077479969201528_2492884771592456296_n-61742e762af.jpg" alt="" class="thumbnail__image">
+                        <div class="thumbnail__data">
+                            <p class="thumbnail-date">36/7/7070</p>
+                            <a href="" class="thumbnail__link">
+                                <span class="thumnail__title">شاهد الشناوي أخطبوط الأهلي يتحدث..عن أسعد اللحظات وأصعب مباراة وأفضل مهاجم واجهه ومباراة لا ينساها</span>
+                            </a>
+                            <a href="" class="section__link has-play-icon">مشاهدة</a>
+                        </div>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+        </section>
+
+        <section id="players">
+            <div class="players-wrapper">
+
+                <h3 class="section__title">الفريق الأول لكرة القدم</h3>
+
+
+
+                <div class="slides-wrapper">
+                    
+                    <div class="slide-button">
+                        <button class="slide-button__next" id="slide-players-next" area-label="next"  type="button"></button>
+                        <button class="slide-button__prev" id="slide-players-prev" area-label="previous"  type="button"></button>
+                    </div>
+
+                    <div class="slides-container">
+                        <ul class="list players-list flex-row">
+        
+                            <li class="player-item listitem active-player">
+                                <a href="" class="player__link">
+                                    <img src="./img/shenawy-1-600ec6ef1a471.png" alt="" class="player__image">
+                                    <p class="player__number">1</p>
+                                    <div class="player__info">
+                                        <p class="player__name">محمد الشناوي</p>
+                                        <p class="player__position">حارس مرمى</p>
+                                    </div>
+                                </a>
+                            </li>
+        
+                            <li class="player-item list-item">
+                                <a href="" class="player__link">
+                                    <img src="./img/hamdy-8-600ecbd8540fb.png" alt="" class="player__image">
+                                    <p class="player__number">8</p>
+                                    <div class="player__info">
+                                        <p class="player__name">حمدي فتحي</p>
+                                        <p class="player__position">خط وسط</p>                
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="player-item list-item">
+                                <a href="" class="player__link">
+                                    <img src="./img/kahraba-7-600ecac469bca.png" alt="" class="player__image">
+                                    <p class="player__number">7</p>
+                                    <div class="player__info">
+                                        <p class="player__name">محمود عبد المنعم «كهربا»</p>
+                                        <p class="player__position">مهاجم</p>             
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="player-item list-item">
+                                <a href="" class="player__link">
+                                    <img src="./img/afsha-19-600ecfe26e576.png" alt="" class="player__image">
+                                    <p class="player__number">19</p>
+                                    <div class="player__info">
+                                        <p class="player__name">محمد مجدي «أفشة»</p>
+                                        <p class="player__position">خط وسط</p>             
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="player-item list-item">
+                                <a href="" class="player__link">
+                                    <img src="./img/solia-17-600ecfa2d4c08.png" alt="" class="player__image">
+                                    <p class="player__number">17</p>
+                                    <div class="player__info">
+                                        <p class="player__name">عمرو السولية</p>
+                                        <p class="player__position">خط وسط</p>           
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="player-item list-item">
+                                <a href="" class="player__link">
+                                    <img src="./img/dieng-15-600ece9eb4b61.png" alt="" class="player__image">
+                                    <p class="player__number">15</p>
+                                    <div class="player__info">
+                                        <p class="player__name">أليو ديانج</p>
+                                        <p class="player__position">خط وسط</p>      
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="player-item list-item">
+                                <a href="" class="player__link">
+                                    <img src="./img/ayman-12-600ecd1c27e21.png" alt="" class="player__image">
+                                    <p class="player__number">12</p>
+                                    <div class="player__info">  
+                                        <p class="player__name">أيمن أشرف</p>
+                                        <p class="player__position">مدافع</p>    
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="player-item list-item">
+                                <a href="" class="player__link">
+                                    <img src="./img/yasser-6-600ec5fb5ef02.png" alt="" class="player__image">
+                                    <p class="player__number">6</p>
+                                    <div class="player__info">
+                                        <p class="player__name">ياسر إبراهيم</p>
+                                        <p class="player__position">مدافع</p>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="player-item list-item">
+                                <a href="" class="player__link">
+                                    <img src="./img/1-5f69d582783aa.png" alt="" class="player__image">
+                                    <p class="player__number">4</p>
+                                    <div class="player__info">
+                                        <p class="player__name">محمود متولي</p>
+                                        <p class="player__position">مدافع</p> 
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="player-item list-item">
+                                <a href="" class="player__link">
+                                    <img src="./img/ramy-5-600ecb4e6ed2b.png" alt="" class="player__image">
+                                    <p class="player__number">5</p>
+                                    <div class="player__info">
+                                        <p class="player__name">رامي ربيعة</p>
+                                        <p class="player__position">مدافع</p>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="player-item list-item">
+                                <a href="" class="player__link">
+                                    <img src="./img/maaloul-21-600ed0d665380.png" alt="" class="player__image">
+                                    <p class="player__number">21</p>
+                                    <div class="player__info">
+                                        <p class="player__name">علي معلول</p>
+                                        <p class="player__position">مدافع</p>
+                                    </div>
+                                </a>
+                            </li>
+        
+                            <li class="player-item list-item">
+                                <a href="" class="player__link">
+                                    <img src="./img/hany-30-600ed2019631a.png" alt="" class="player__image">
+                                    <p class="player__number">30</p>
+                                    <div class="player__info">
+                                        <p class="player__name">محمد هاني</p>
+                                        <p class="player__position">مدافع</p>
+                                    </div>
+                                </a>
+                            </li>
+        
+                            <li class="player-item list-item">
+                                <a href="" class="player__link">
+                                    <img src="./img/waleed-11-600eccc3cf266.png" alt="" class="player__image">
+                                    <p class="player__number">11</p>
+                                    <div class="player__info">
+                                        <p class="player__name">وليد سليمان</p>
+                                        <p class="player__position">خط وسط</p>
+                                    </div>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div id="featured-player">
+                        <a class="featured-player__link"  href="">
+                            <p class="featured-player__name">محمد الشناوي</p>
+                            <p class="featured-player__position">حارس مرمى</p>
+                        </a>
+                    </div>
+                </div>
+
+
+                <!-- <div class="featured-player">
+                    <a class="featured-player__link"  href="">
+                        <p class="featured-player__name">محمد الشناوي</p>
+                        <p class="featured-player__position">حارس مرمى</p>
+                    </a>
+                </div> -->
+
+
+                <!-- <ul class="list players-names">
+                    <li class="players-names__item">
+                        <a href="">
+                            <p class="player__name">محمد الشناوي</p>
+                            <p class="player__position">حارس مرمى</p>
+                        </a>
+                    </li> -->
+<!-- 
+                    <li class="players-names__item">
+                        <a href="">
+                            <p class="player__name">وليد سليمان</p>
+                            <p class="player__position">خط وسط</p>
+                        </a>
+                    </li>
+                    <li class="players-names__item">
+                        <a href="">
+                            <p class="player__name">محمد هاني</p>
+                            <p class="player__position">مدافع</p>
+                        </a>
+                    </li>
+                    <li class="players-names__item">
+                        <a href="">
+                            <p class="player__name">علي معلول</p>
+                            <p class="player__position">مدافع</p>
+                        </a>
+                    </li>
+                    <li class="players-names__item">
+                        <a href="">
+                            <p class="player__name">رامي ربيعة</p>
+                            <p class="player__position">مدافع</p>
+                        </a>
+                    </li>
+                    <li class="players-names__item">
+                        <a href="">
+                            <p class="player__name">محمود متولي</p>
+                            <p class="player__position">مدافع</p>
+                        </a>
+                    </li>
+                    <li class="players-names__item">
+                        <a href="">
+                            <p class="player__name">ياسر إبراهيم</p>
+                            <p class="player__position">مدافع</p>
+                        </a>
+                    </li>
+                    <li class="players-names__item">
+                        <a href="">
+                            <p class="player__name">أيمن أشرف</p>
+                            <p class="player__position">مدافع</p>
+                        </a>
+                    </li>
+                    <li class="players-names__item">
+                        <a href="">
+                            <p class="player__name">أليو ديانج</p>
+                            <p class="player__position">خط وسط</p>
+                        </a>
+                    </li>
+                    <li class="players-names__item">
+                        <a href="">
+                            <p class="player__name">عمرو السولية</p>
+                            <p class="player__position">خط وسط</p>
+                        </a>
+                    </li>
+                    <li class="players-names__item">
+                        <a href="">
+                            <p class="player__name">محمد مجدي «أفشة»</p>
+                            <p class="player__position">خط وسط</p>
+                        </a>
+                    </li>
+                    <li class="players-names__item">
+                        <a href="">
+                            <p class="player__name">محمود عبد المنعم «كهربا»</p>
+                            <p class="player__position">مهاجم</p>
+                        </a>
+                    </li>
+                    <li class="players-names__item">
+                        <a href="">
+                            <p class="player__name">حمدي فتحي</p>
+                            <p class="player__position">خط وسط</p>
+                        </a>
+                    </li>
+                     -->
+                </ul>
+
+            </div>
+
+        </section>
+
+    </div>
+
+</body>
+</html>

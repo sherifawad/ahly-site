@@ -11,6 +11,7 @@ module.exports = {
     ecmaVersion: 13,
     sourceType: "module",
   },
+  parser: "babel-eslint",
   rules: {
     strict: ["error", "global"],
     "func-style": ["error", "expression"],
