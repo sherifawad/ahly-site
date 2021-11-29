@@ -48,40 +48,44 @@ const cssLoader = ({ env }) => {
 };
 
 const HTMLLoader = {
-  test: /\.html$/,
+  test: /\.html$/i,
   use: ["html-loader"],
 };
 
-const URLLoaoder = {
-  test: /\.(png|svg|jpg|gif|webp)$/i,
-  use: [
-    {
-      loader: "url-loader",
-      options: {
-        limit: 8192, // in bytes
-      },
-    },
-  ],
-};
+const Imageloader = {
+  test: /\.(png|jpe?g|gif|svg|ico|webp)$/i,
+  /**
+   * The `type` setting replaces the need for "url-loader"
+   * and "file-loader" in Webpack 5.
+   *
+   * setting `type` to "asset" will automatically pick between
+   * outputing images to a file, or inlining them in the bundle as base64
+   * with a default max inline size of 8kb
+   */
+  type: "asset",
 
-const FileLoader = {
-  test: /\.(png|jpe?g|gif)$/i,
-  use: [
-    {
-      loader: "file-loader",
-      options: {
-        name: "[name].[hash].[ext]",
-        outputPath: "imgs",
-        // publicPath: path.resolve(__dirname, "dist/"),
-      },
-    },
-  ],
-};
+  /**
+   * If you want to inline larger images, you can set
+   * a custom `maxSize` for inline like so:
+   */
+  // parser: {
+  //   dataUrlCondition: {
+  //     maxSize: 30 * 1024,
+  //   },
+  // },
 
+  /**
+   * customize output filename
+   * instead of : assetModuleFilename: 'images/[hash][ext][query]'
+   */
+
+  generator: {
+    filename: "imgs/[hash][ext][query]",
+  },
+};
 module.exports = {
   cssLoader: cssLoader,
   JSLoader: JSLoader,
-  FileLoader: FileLoader,
-  URLLoaoder: URLLoaoder,
   HTMLLoader: HTMLLoader,
+  Imageloader: Imageloader,
 };

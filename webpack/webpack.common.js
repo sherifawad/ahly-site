@@ -24,12 +24,12 @@ module.exports = {
     rules: [
       loaders.HTMLLoader,
       loaders.JSLoader,
-      loaders.FileLoader,
       loaders.cssLoader({ env: mode }),
+      loaders.Imageloader
     ],
   },
   output: {
-    assetModuleFilename: "imgs/[hash][ext][query]",
+    // assetModuleFilename: "imgs/[hash][ext][query]",
     filename: "js/[name].bundle.js",
     path: path.resolve(__dirname, "../dist"),
   },

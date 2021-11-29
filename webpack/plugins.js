@@ -10,34 +10,17 @@ const _CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const htmlWebpackPlugin = ({ env }) => {
   const result = new _HtmlWebpackPlugin({
     template: path.resolve(__dirname, "../src", "index.html"),
+    minify:
+      env === "production"
+        ? {
+            removeAttributeQuotes: true,
+            collapseWhitespace: true,
+            removeComments: true,
+          }
+        : {},
   });
-  if (env === "production") {
-    result.minify = {
-      removeAttributeQuotes: true,
-      collapseWhitespace: true,
-      removeComments: true,
-    };
-    // result.minify.removeAttributeQuotes = true;
-    // result.minify.collapseWhitespace = true;
-    // result.minify.removeComments = true;
-  }
   return result;
 };
-
-const HtmlWebpackPluginProd = new _HtmlWebpackPlugin({
-  template: path.resolve(__dirname, "../src", "index.html"),
-  // template: "./src/template.html",
-  minify: {
-    removeAttributeQuotes: true,
-    collapseWhitespace: true,
-    removeComments: true,
-  },
-});
-
-const HtmlWebpackPluginDev = new _HtmlWebpackPlugin({
-  template: path.resolve(__dirname, "../src", "index.html"),
-  // template: "./src/template.html",
-});
 
 const ESLintPlugin = new _ESLintPlugin({
   overrideConfigFile: path.resolve(__dirname, ".eslintrc.js"),
@@ -61,8 +44,6 @@ module.exports = {
   MiniCssExtractPlugin: MiniCssExtractPlugin,
   StyleLintPlugin: StyleLintPlugin,
   ESLintPlugin: ESLintPlugin,
-  HtmlWebpackPluginDev: HtmlWebpackPluginDev,
-  HtmlWebpackPluginProd: HtmlWebpackPluginProd,
   htmlWebpackPlugin: htmlWebpackPlugin,
   CssMinimizerPlugin: new _CssMinimizerPlugin(),
   TerserPlugin: new _TerserPlugin(),
