@@ -83,14 +83,14 @@ const StyleLintPlugin = new _StyleLintPlugin({
   files: "**/*.css",
 });
 
-const MiniCssExtractPlugin = new _MiniCssExtractPlugin({
-  filename: "css/[name].bundle.css",
+const MiniCssExtractPlugin = ({env}) => new _MiniCssExtractPlugin({
+  filename: env === "production" ? "css/[name].[contenthash].bundle.css" : "css/[name].bundle.css",
   chunkFilename: "[id].css",
 });
 
 module.exports = {
   CleanWebpackPlugin: new CleanWebpackPlugin(),
-  MiniCssExtractPlugin: MiniCssExtractPlugin,
+  miniCssExtractPlugin: MiniCssExtractPlugin,
   StyleLintPlugin: StyleLintPlugin,
   ESLintPlugin: ESLintPlugin,
   htmlWebpackPlugin: htmlWebpackPlugin,

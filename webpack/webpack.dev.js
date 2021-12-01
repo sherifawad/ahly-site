@@ -4,6 +4,11 @@ const common = require("./webpack.common.js");
 
 module.exports = merge(common, {
   mode: "development",
+  output: {
+    // assetModuleFilename: "imgs/[hash][ext][query]",
+    filename: "js/[name].bundle.js",
+    path: path.resolve(__dirname, "../dist"),
+  },
   optimization: {
     runtimeChunk: "single",
   },
