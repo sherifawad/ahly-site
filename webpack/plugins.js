@@ -24,13 +24,14 @@ const htmlWebpackPlugin = ({ env }) => {
   return result;
 };
 
-const htmlWebpackPluginpages = ({ env, pages }) => {
-  const result = pages.map((page) => 
+const htmlWebpackPluginpages = ({ env = "production", pages, commonChunks=[] }) => {
+  const result = pages.map(
+    (page) =>
       new _HtmlWebpackPlugin({
         inject: true,
         template: path.resolve(__dirname, "../src", `${page}.html`),
         filename: `${page}.html`,
-        chunks: [page],
+        chunks: [`${page}`, ...commonChunks],
         minify:
           env === "production"
             ? {
@@ -60,13 +61,13 @@ const htmlWebpackPluginpages = ({ env, pages }) => {
   //             }
   //           : {},
   //     }))
-  //   } 
+  //   }
   //   catch (err) {
   //     console.log("empty");
   //   }
   //     return a;
   // }, []);
-  
+
   return result;
 };
 

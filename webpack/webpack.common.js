@@ -15,8 +15,16 @@ if (process.env.NODE_ENV === "production") {
 // }
 
 // multi page array names without extensions and js file same as html files
-const pages = ["index"];
-
+const pages = ["index", "about"];
+const commonChunks = ["vendor"];
+let scripts = pages.reduce((config, page) => {
+  config[page] = path.join(__dirname, "../src", "js", `${page}.js`);
+  return config;
+}, {});
+let commonScripts = commonChunks.reduce((config, chunk) => {
+  config[chunk] = path.join(__dirname, "../src", "js", `${chunk}.js`);
+  return config;
+}, {});
 module.exports = {
   mode: mode,
   // entry: ["/src/js/script.js", "/src/js/vendor.js"],
@@ -24,10 +32,7 @@ module.exports = {
   //   vendor: path.join(__dirname, "../src", "js", "vendor"),
   //   index: path.join(__dirname, "../src", "js", "index"),
   // },
-  entry: pages.reduce((config, page) => {
-    config[page] = path.join(__dirname, "../src", "js", `${page}.js`);
-    return config;
-  }, {}),
+  entry: {...commonScripts, ...scripts},
   output: {
     // assetModuleFilename: "imgs/[hash][ext][query]",
     filename: "js/[name].bundle.js",
@@ -49,8 +54,10 @@ module.exports = {
   plugins: [
     new webpack.ProgressPlugin(),
     plugins.CleanWebpackPlugin,
+    // plugins.htmlWebpackPlugin({env: mode}),
     // plugins.ESLintPlugin,
     // plugins.StyleLintPlugin,
     plugins.MiniCssExtractPlugin,
-  ].concat(plugins.htmlWebpackPluginpages({ env: mode, pages: pages })),
+  ]
+  .concat(plugins.htmlWebpackPluginpages({ env: mode, pages: pages, commonChunks:commonChunks })),
 };
