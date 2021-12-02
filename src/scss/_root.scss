@@ -1,0 +1,26 @@
+@use "./_type-scale" as *;
+@use "./media-query";
+
+:root {
+
+@each $color, $shades in $colors {
+    @each $shade, $value in $shades {
+        --color-#{$color}-#{$shade}: #{$value};
+    }
+}
+
+
+  @each $screen-size, $font-sizes in $type-scale {
+    @if $screen-size == small {
+      @each $size, $value in $font-sizes {
+        --fs-#{$size}: #{$value};
+      }
+    } @else {
+      @include mq(small) {
+        @each $size, $value in $font-sizes {
+          --fs-#{$size}: #{$value};
+        }
+      }
+    }
+  }
+}
